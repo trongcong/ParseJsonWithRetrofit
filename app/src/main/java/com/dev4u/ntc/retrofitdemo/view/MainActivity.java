@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mJsonObject.setOnClickListener(this);
     }
 
-    private void getRetrofitArray() {
+    private void getJsonRetrofitArray() {
         mAPIService.getPostsDetails().enqueue(new Callback<List<Post>>() {
             @Override
             public void onResponse(Call<List<Post>> call, Response<List<Post>> response) {
@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
     }
 
-   private void getRetrofitObject() {
+    private void getJsonRetrofitObject() {
         mAPIService.getPostDetails().enqueue(new Callback<Post>() {
             @Override
             public void onResponse(Call<Post> call, Response<Post> response) {
@@ -116,10 +116,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.jsonArray:
-                getRetrofitArray();
+                getJsonRetrofitArray();
                 break;
             case R.id.jsonObject:
-                getRetrofitObject();
+                getJsonRetrofitObject();
                 break;
         }
     }
