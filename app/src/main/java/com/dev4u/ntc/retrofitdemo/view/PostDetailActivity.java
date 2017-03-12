@@ -3,7 +3,6 @@ package com.dev4u.ntc.retrofitdemo.view;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.webkit.WebView;
 
 import com.dev4u.ntc.retrofitdemo.R;
@@ -26,9 +25,6 @@ public class PostDetailActivity extends AppCompatActivity {
                 getIntent().getStringExtra("content"),
                 getIntent().getStringExtra("nameCa"),
                 getIntent().getStringExtra("des"));
-        Log.d("abc",getIntent().getStringExtra("title"));
-        Log.d("abc",getIntent().getStringExtra("nameCa"));
-        Log.d("abc",getIntent().getStringExtra("des"));
     }
 
     private void showDetailPost(String title, String content, String nameCa, String des) {
